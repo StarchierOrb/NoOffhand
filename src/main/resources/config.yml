@@ -1,0 +1,40 @@
+NoOffhand:
+  settings:
+    limit-type: allowlist
+    #Material detection list type
+    # Available types:
+    # allowlist - Whitelist mode - Only the items in the following list can be placed in offhand
+    # denylist - Blacklist mode - Only the items in the following list cannot be placed in offhand
+    list:
+      - SHIELD
+      - TORCH
+      - TOTEM_OF_UNDYING
+    #Material detection list
+    #For 1.12 and lower:
+    #Support items with sub-id. If sub-id is not specificed, all sub-items are applied by default.
+    #To use sub id, numeral id is recommended and quotation marks are required.
+    #Example:
+    #  - '349:3'
+    #To disable material check, just set it to 'list: []'
+    ###
+    lore-limit-type: denylist
+    #Lore detection list type
+    # Available types:
+    # allowlist - Whitelist mode - Item LORE containing any line of text in the following list can be placed in offhand.
+    # denylist - Blacklist mode - Item LORE containing any line of text in the following list can NOT be placed in offhand.
+    lore-list:
+      - 'NO OFFHAND'
+      - 'Main hand only'
+      - '&c&lNo Offhand!'
+    #There is no need to match exactly, as long as a line of lore contains the text above.
+    #It can be used together with material detection. You can set a lore to allow a blacklisted item to be placed in offhand and vice versa
+  messages:
+    help:
+      - '&7---&aNoOffhand Help&7----'
+      - ' &b/nof reload  &7- &6Reload config'
+      - '&7--------------------------------'
+    command-usage: '&cUse /nof for help.'
+    reload-completed: '&aConfiguration file reloaded!'
+    reload-failed: '&cError(s) detected, pls check configuration file.'
+    no-permission: '&cYou don''t have permission to perform this command!'
+    item-not-exist: 'Item %s is not exist! Check config!'

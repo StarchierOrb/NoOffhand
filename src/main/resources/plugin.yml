@@ -1,0 +1,14 @@
+name: NoOffhand
+version: @version@
+main: cn.lzjsmc.nooffhand.NoOffhand
+authors: [Starchier]
+description: Block the specific items in offhand
+api-version: 1.13
+commands:
+  nof:
+    usage: use /nof
+    description: Main command for NoOffhand.
+permissions:
+  nooffhand.admin:
+    default: op
+    description: Accessing plugin commands.
